@@ -1,4 +1,16 @@
-const main_section=document.querySelector("main_section"),
-overlay=document.querySelector("overlay"),
-main_section_btn=document.querySelector("main_section_btn"),
+document.addEventListener("DOMContentLoaded", () => {
+  const mainSection = document.querySelector(".main_section");
+  const overlay = document.querySelector(".overlay");
+  const showBtn = document.querySelector(".main_section_btn");
+  const closeBtn = document.querySelector(".close_btn");
 
+  showBtn.addEventListener("click", () => mainSection.classList.add("active"));
+
+  overlay.addEventListener("click", () =>
+    mainSection.classList.remove("active")
+  );
+
+  closeBtn.addEventListener("click", () =>
+    mainSection.classList.remove("active")
+  );
+});
